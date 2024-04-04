@@ -1,0 +1,63 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.buy{
+    background-color: beige;
+    padding: 1rem;
+    width: 50%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.buy input{
+    border-radius: 5px;
+    border-color: black;
+    padding: 0.5rem;
+    width: 50%;
+    background-color: antiquewhite;
+}
+button{
+    padding: 0.5rem;
+    width: 50%;
+}
+.sales{
+    background-color: goldenrod;
+    padding: 1rem;
+    width: 50%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.compra{
+    background-color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 0.5rem;
+    border-color: black;
+    border-radius: 5px;
+    width: 60%;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.total{
+    background-color: orange;
+    padding: 1rem;
+    width: 50%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
