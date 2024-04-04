@@ -1,0 +1,8 @@
+# Ignorar archivos de compilación
+*.class
+*.jar
+*.war
+
+# Ignorar directorios generados
+target/
+node_modules/
