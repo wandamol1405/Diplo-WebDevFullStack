@@ -5,4 +5,4 @@
 
 # Ignorar directorios generados
 target/
-node_modules/
+BackEnd/node_modules/
