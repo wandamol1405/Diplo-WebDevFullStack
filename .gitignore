@@ -6,3 +6,4 @@
 # Ignorar directorios generados
 target/
 BackEnd/node_modules/
+React/node_modules/

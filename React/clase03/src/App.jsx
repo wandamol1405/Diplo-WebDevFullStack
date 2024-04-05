@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Products from "./components/products";
 import "./components/styles.css";
 import Search from "./components/search";
+import Nav from "./components/nav";
 
 const App = (props) => {
   const [products, setProducts] = useState([]);
@@ -43,6 +44,7 @@ const App = (props) => {
   }, []);
   return (
     <>
+      <Nav />
       <Search handleSearch={filterProducts} />
       <Products data={filteredProducts} />
     </>

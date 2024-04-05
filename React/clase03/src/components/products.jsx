@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Card from "./card";
+import ProductsContainer from "./productsContainer";
 
 function Products({data = []}) {
   return (
-    <div className="products">
+    <ProductsContainer>
       {data.map((producto) => (
         <Card
           key={producto.id}
@@ -13,7 +14,7 @@ function Products({data = []}) {
           id={producto.id}
         />
       ))}
-    </div>
+    </ProductsContainer>
   );
 }
 

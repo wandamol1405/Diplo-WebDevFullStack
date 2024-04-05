@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import FilterContainer from "./filterContainer";
+import FormButton from "./formButton";
+
+const formInputsStyles = { borderRadius: "5px", padding: "0.3rem" };
 
 const categorys = [
   "electronics",
@@ -20,45 +24,53 @@ function Search({ handleSearch }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h3>Filtrado</h3>
-      <input
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        placeholder="Buscar nombre"
-      />
-      <input
-        type="number"
-        value={price}
-        onChange={(e) => setPrice(e.target.value)}
-        placeholder="Bucar precio"
-      />
-      <select
-        name="categorys"
-        id="categorys"
-        value={category}
-        onChange={(e) => setCategory(e.target.value)}
-        defaultValue={""}
-      >
-        <option value="" disabled>
-          Selecciona una categoria
-        </option>
-        {categorys.map((category) => {
-          return (
-            <option value={category} key={category}>
-              {category}
-            </option>
-          );
-        })}
-      </select>
+      <FilterContainer>
+        <div style={{ color: "white", fontSize: "1.3rem" }}>Filtrado</div>
+        <input
+          style={formInputsStyles}
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Buscar nombre"
+        />
+        <input
+          style={formInputsStyles}
+          type="number"
+          value={price}
+          onChange={(e) => setPrice(e.target.value)}
+          placeholder="Bucar precio"
+        />
+        <select
+          style={formInputsStyles}
+          name="categorys"
+          id="categorys"
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          defaultValue={""}
+        >
+          <option value="" disabled>
+            Selecciona una categoria
+          </option>
+          {categorys.map((category) => {
+            return (
+              <option value={category} key={category}>
+                {category}
+              </option>
+            );
+          })}
+        </select>
 
-      <input
-        type="checkbox"
-        checked={order}
-        onChange={() => setOrder((prev) => !prev)}
-      />
+        <input
+          type="checkbox"
+          checked={order}
+          onChange={() => setOrder((prev) => !prev)}
+        />
+        <label style={{ color: "white", fontSize: "0.7rem" }}>
+          Ordenar alfabeticamente
+        </label>
 
-      <button>Buscar</button>
+        <FormButton>Buscar</FormButton>
+      </FilterContainer>
     </form>
   );
 }
